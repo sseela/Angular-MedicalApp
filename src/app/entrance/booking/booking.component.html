@@ -1,0 +1,11 @@
+<h4>your booking starts here:</h4>
+<!-- Enter name: <input type="text" [(ngModel)]="name">
+<button (click)="onClick()">Submit</button>
+<h5>{{nameSent}}</h5> -->
+
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+  Name: <input type="text" formControlName="name"> <br/><br/>
+  Age: <input type="number" formControlName="age"> <br/><br/>
+  Problem: <input type="text" formControlName="problem"> <br/><br/>
+  <button type="submit">Submit</button>
+</form>
